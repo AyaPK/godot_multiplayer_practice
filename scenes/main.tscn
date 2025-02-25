@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bvrgv0fekbp6a"]
+[gd_scene load_steps=8 format=4 uid="uid://bvrgv0fekbp6a"]
 
 [ext_resource type="Texture2D" uid="uid://cyvdfkf7sjia0" path="res://sprites/tilemap_packed.png" id="1_1u0x0"]
 [ext_resource type="Texture2D" uid="uid://bd8fd3w68mxx5" path="res://sprites/tilemap-backgrounds_packed.png" id="1_ujydx"]
+[ext_resource type="Script" path="res://scripts/network_manager.gd" id="3_vn1jf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndslg"]
 texture = ExtResource("1_ujydx")
@@ -262,6 +263,7 @@ tile_set = SubResource("TileSet_5l7mp")
 rendering_quadrant_size = 18
 
 [node name="Network" type="Node" parent="."]
+script = ExtResource("3_vn1jf")
 
 [node name="NetworkUIPanel" type="Panel" parent="Network"]
 z_index = 50
@@ -287,12 +289,17 @@ text = "Join Game"
 
 [node name="IP" type="LineEdit" parent="Network/NetworkUIPanel/VBoxContainer"]
 layout_mode = 2
+text = "localhost"
 placeholder_text = "Ip Address"
 
 [node name="Port" type="LineEdit" parent="Network/NetworkUIPanel/VBoxContainer"]
 layout_mode = 2
+text = "8080"
 placeholder_text = "Port No."
 
 [node name="Username" type="LineEdit" parent="Network/NetworkUIPanel/VBoxContainer"]
 layout_mode = 2
 placeholder_text = "Username"
+
+[connection signal="pressed" from="Network/NetworkUIPanel/VBoxContainer/StartServerButton" to="Network" method="start_host"]
+[connection signal="pressed" from="Network/NetworkUIPanel/VBoxContainer/JoinServerButton" to="Network" method="start_client"]
