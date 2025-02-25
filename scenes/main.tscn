@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://bvrgv0fekbp6a"]
+[gd_scene load_steps=9 format=4 uid="uid://bvrgv0fekbp6a"]
 
 [ext_resource type="Texture2D" uid="uid://cyvdfkf7sjia0" path="res://sprites/tilemap_packed.png" id="1_1u0x0"]
 [ext_resource type="Texture2D" uid="uid://bd8fd3w68mxx5" path="res://sprites/tilemap-backgrounds_packed.png" id="1_ujydx"]
 [ext_resource type="Script" path="res://scripts/network_manager.gd" id="3_vn1jf"]
+[ext_resource type="PackedScene" uid="uid://bkknc1gkb0uwt" path="res://scenes/player.tscn" id="4_2xwao"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndslg"]
 texture = ExtResource("1_ujydx")
@@ -64,9 +65,13 @@ sources/0 = SubResource("TileSetAtlasSource_ndslg")
 texture = ExtResource("1_1u0x0")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -84,9 +89,13 @@ texture_region_size = Vector2i(18, 18)
 18:0/0 = 0
 19:0/0 = 0
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
@@ -104,9 +113,13 @@ texture_region_size = Vector2i(18, 18)
 18:1/0 = 0
 19:1/0 = 0
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:2/0 = 0
 5:2/0 = 0
 6:2/0 = 0
@@ -124,9 +137,13 @@ texture_region_size = Vector2i(18, 18)
 18:2/0 = 0
 19:2/0 = 0
 0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:3/0 = 0
 5:3/0 = 0
 6:3/0 = 0
@@ -144,9 +161,13 @@ texture_region_size = Vector2i(18, 18)
 18:3/0 = 0
 19:3/0 = 0
 0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:4/0 = 0
 5:4/0 = 0
 6:4/0 = 0
@@ -164,9 +185,13 @@ texture_region_size = Vector2i(18, 18)
 18:4/0 = 0
 19:4/0 = 0
 0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:5/0 = 0
 5:5/0 = 0
 6:5/0 = 0
@@ -246,6 +271,7 @@ texture_region_size = Vector2i(18, 18)
 
 [sub_resource type="TileSet" id="TileSet_5l7mp"]
 tile_size = Vector2i(18, 18)
+physics_layer_0/collision_layer = 16
 sources/4 = SubResource("TileSetAtlasSource_ofcnw")
 
 [node name="Main" type="Node2D"]
@@ -266,6 +292,7 @@ rendering_quadrant_size = 18
 script = ExtResource("3_vn1jf")
 
 [node name="NetworkUIPanel" type="Panel" parent="Network"]
+visible = false
 z_index = 50
 offset_left = -97.0
 offset_top = -101.0
@@ -300,6 +327,10 @@ placeholder_text = "Port No."
 [node name="Username" type="LineEdit" parent="Network/NetworkUIPanel/VBoxContainer"]
 layout_mode = 2
 placeholder_text = "Username"
+
+[node name="Player" parent="." instance=ExtResource("4_2xwao")]
+position = Vector2(-208, -28)
+collision_mask = 16
 
 [connection signal="pressed" from="Network/NetworkUIPanel/VBoxContainer/StartServerButton" to="Network" method="start_host"]
 [connection signal="pressed" from="Network/NetworkUIPanel/VBoxContainer/JoinServerButton" to="Network" method="start_client"]
