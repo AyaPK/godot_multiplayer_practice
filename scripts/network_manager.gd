@@ -11,6 +11,8 @@ const MAX_CONNECTIONS = 3
 @onready var network_ui_panel: Panel = $NetworkUIPanel
 @onready var spawned_players: Node2D = $SpawnedPlayers
 
+var colour_index: Array = ["red", "blue", "green", "yellow"]
+
 var local_username: String
 
 func _ready() -> void:
@@ -41,9 +43,10 @@ func _on_username_change(updated_username: String) -> void:
 func _player_connected(player_id: int) -> void:
 	print("Player has joined the server with id %s" % player_id)
 	var player: PlayerCharacter = PLAYER.instantiate()
-	#player.position = Vector2(randf_range(SPAWN_MIN_X, SPAWN_MAX_X), -20)
+	player.position = Vector2(randf_range(SPAWN_MIN_X, SPAWN_MAX_X), -20)
 	player.name = str(player_id)
 	player.player_id = player_id
+	player.colour_name = colour_index[spawned_players.get_children().size()]
 	spawned_players.add_child(player, true)
 
 func _player_disconnected(player_id: int) -> void:
