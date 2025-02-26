@@ -41,7 +41,7 @@ func _on_username_change(updated_username: String) -> void:
 func _player_connected(player_id: int) -> void:
 	print("Player has joined the server with id %s" % player_id)
 	var player: PlayerCharacter = PLAYER.instantiate()
-	player.position = Vector2(randf_range(SPAWN_MIN_X, SPAWN_MAX_X), -20)
+	#player.position = Vector2(randf_range(SPAWN_MIN_X, SPAWN_MAX_X), -20)
 	player.name = str(player_id)
 	player.player_id = player_id
 	spawned_players.add_child(player, true)
