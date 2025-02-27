@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkknc1gkb0uwt"]
+[gd_scene load_steps=13 format=3 uid="uid://bkknc1gkb0uwt"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_nw0qa"]
 [ext_resource type="Script" path="res://scripts/input_sync.gd" id="2_5o8cx"]
@@ -32,8 +32,11 @@ properties/1/path = NodePath("InputSync:jump_input")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_01skm"]
-size = Vector2(20, 21)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi7v2"]
+size = Vector2(20, 21.5)
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_xwx15"]
+length = 13.0
 
 [sub_resource type="Animation" id="Animation_gkx4u"]
 length = 0.001
@@ -112,6 +115,9 @@ _data = {
 collision_mask = 17
 script = ExtResource("1_nw0qa")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
 [node name="MultiplayerSync" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_edkeg")
 
@@ -123,9 +129,13 @@ script = ExtResource("2_5o8cx")
 texture = ExtResource("3_svl3v")
 hframes = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_01skm")
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.25)
+shape = SubResource("RectangleShape2D_oi7v2")
+
+[node name="push_up" type="CollisionShape2D" parent="."]
+shape = SubResource("SeparationRayShape2D_xwx15")
+one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
