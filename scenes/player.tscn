@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bkknc1gkb0uwt"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_nw0qa"]
-[ext_resource type="Script" path="res://scripts/input_sync.gd" id="2_5o8cx"]
+[ext_resource type="Script" uid="uid://bjxdlx3y4254l" path="res://scripts/player.gd" id="1_nw0qa"]
+[ext_resource type="Script" uid="uid://dx82gr6kfptc1" path="res://scripts/input_sync.gd" id="2_5o8cx"]
 [ext_resource type="Texture2D" uid="uid://bx58vs3jgv2gw" path="res://sprites/red_guy.png" id="3_svl3v"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_edkeg"]
@@ -105,10 +105,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u0hyw"]
 _data = {
-"RESET": SubResource("Animation_gkx4u"),
-"idle": SubResource("Animation_pkmt4"),
-"jump": SubResource("Animation_ent8o"),
-"walk": SubResource("Animation_bh27t")
+&"RESET": SubResource("Animation_gkx4u"),
+&"idle": SubResource("Animation_pkmt4"),
+&"jump": SubResource("Animation_ent8o"),
+&"walk": SubResource("Animation_bh27t")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -139,6 +139,6 @@ one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_u0hyw")
+&"": SubResource("AnimationLibrary_u0hyw")
 }
 autoplay = "idle"

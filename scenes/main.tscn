@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cyvdfkf7sjia0" path="res://sprites/tilemap_packed.png" id="1_1u0x0"]
 [ext_resource type="Texture2D" uid="uid://bd8fd3w68mxx5" path="res://sprites/tilemap-backgrounds_packed.png" id="1_ujydx"]
-[ext_resource type="Script" path="res://scripts/network_manager.gd" id="3_vn1jf"]
+[ext_resource type="Script" uid="uid://pcuptjhthemw" path="res://scripts/network_manager.gd" id="3_vn1jf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndslg"]
 texture = ExtResource("1_ujydx")
@@ -327,7 +327,7 @@ layout_mode = 2
 placeholder_text = "Username"
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Network"]
-_spawnable_scenes = PackedStringArray("res://scenes/player.tscn")
+_spawnable_scenes = PackedStringArray("uid://bkknc1gkb0uwt")
 spawn_path = NodePath("../SpawnedPlayers")
 
 [node name="SpawnedPlayers" type="Node2D" parent="Network"]
